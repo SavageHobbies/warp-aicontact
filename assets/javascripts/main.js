@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const darkModeButton = document.getElementById('darkmode-button');
 
+  // Ensure the toggle icon reflects initial state
+  if (document.body.classList.contains('dark')) {
+    darkModeButton.innerHTML = '<i class="bi bi-sun-fill"></i>';
+  }
+
   darkModeButton.addEventListener('click', toggleMode);
 
   function toggleMode() {

@@ -269,10 +269,10 @@ img:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(120px 120px at 50% 50%, rgba(2,155,155,0.18), rgba(0,0,0,0.0));
-  color: #e9fefe;
+  background: linear-gradient(0deg, rgba(0,0,0,0.72), rgba(0,0,0,0.72));
+  color: #ffffff;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease;
   text-align: center;
   pointer-events: none;
 }
@@ -280,9 +280,15 @@ img:hover {
   opacity: 1;
 }
 #solutions-intro .solution-card .metric {
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: 2.2rem;
+  font-weight: 900;
   letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  transform: translateY(8px);
+  transition: transform 0.25s ease;
+}
+#solutions-intro .solution-card:hover .metric {
+  transform: translateY(0);
 }
 #solutions-intro .solution-card .metric .suffix {
   font-size: 1.1rem;
@@ -290,8 +296,14 @@ img:hover {
 }
 #solutions-intro .solution-card .label {
   margin-top: 6px;
-  font-size: 0.95rem;
-  opacity: 0.9;
+  font-size: 1rem;
+  opacity: 0.95;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  transform: translateY(8px);
+  transition: transform 0.25s ease 0.05s;
+}
+#solutions-intro .solution-card:hover .label {
+  transform: translateY(0);
 }
 
 /* Swup page transition */
