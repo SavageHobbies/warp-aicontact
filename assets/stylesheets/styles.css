@@ -234,6 +234,66 @@ img:hover {
   transform: scale(1.1);
 }
 
+/* Hero CTA prominence */
+.btn-cta {
+  font-size: 1.05rem;
+  padding: 0.95rem 2.25rem;
+  border: 1px solid rgba(2,155,155,0.7);
+  box-shadow: 0 10px 28px rgba(2,155,155,0.35);
+}
+
+/* Solutions Intro Cards */
+#solutions-intro .solution-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#solutions-intro .solution-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  display: block;
+}
+#solutions-intro .solution-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(2,155,155,0.25);
+}
+#solutions-intro .solution-card .overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(120px 120px at 50% 50%, rgba(2,155,155,0.18), rgba(0,0,0,0.0));
+  color: #e9fefe;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  pointer-events: none;
+}
+#solutions-intro .solution-card:hover .overlay {
+  opacity: 1;
+}
+#solutions-intro .solution-card .metric {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+#solutions-intro .solution-card .metric .suffix {
+  font-size: 1.1rem;
+  margin-left: 2px;
+}
+#solutions-intro .solution-card .label {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
 /* Swup page transition */
 .transition-fade {
   transition: opacity 0.35s ease, transform 0.35s ease;

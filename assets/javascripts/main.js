@@ -363,4 +363,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   } catch (e) {}
 
+  /**
+   * Solutions cards hover metric animation
+   */
+  (function initSolutionCardMetrics(){
+    const cards = document.querySelectorAll('#solutions-intro .solution-card');
+    if (!cards.length) return;
+
+    cards.forEach(card => {
+      const valueEl = card.querySelector('.metric .value');
+      const target = parseInt(card.getAttribute('data-metric-target') || '0', 10);
+      let rafId = 0, startTs = 0;
+
+      function step(ts){
+        if (!startTs) startTs = ts;
+        const p = Math.min(1, (ts - startTs)/650);
+        const val = Math.floor(p * target);
+        if (valueEl) valueEl.textContent = String(val);
+        if (p < 1) rafId = requestAnimationFrame(step);
+      }
+
+      card.addEventListener('mouseenter', () => {
+        cancelAnimationFrame(rafId); startTs = 0; rafId = requestAnimationFrame(step);
+      });
+      card.addEventListener('mouseleave', () => {
+        cancelAnimationFrame(rafId);
+      });
+    });
+  })();
+
 });
