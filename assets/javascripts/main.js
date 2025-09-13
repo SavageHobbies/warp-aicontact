@@ -325,4 +325,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /**
+   * Rotating "Get More" headline (Home only)
+   */
+  const rotateTarget = document.getElementById('rotating-text');
+  if (rotateTarget) {
+    const words = ['Sales','Likes','Google Reviews','Time','Clients','Bookings','Opportunities','Responses'];
+    let idx = 0;
+    const swap = () => {
+      idx = (idx + 1) % words.length;
+      rotateTarget.textContent = words[idx];
+    };
+    setInterval(swap, 2000);
+  }
+
+  /**
+   * Swup transitions & re-init on navigation
+   */
+  try {
+    if (window.Swup) {
+      const swup = new Swup({ containers: ['#main'] });
+      document.addEventListener('swup:contentReplaced', () => {
+        if (typeof aos_init === 'function') aos_init();
+        try { new PureCounter(); } catch(e){}
+      });
+    }
+  } catch (e) {}
+
+  /**
+   * GSAP microinteractions (if available)
+   */
+  try {
+    if (window.gsap) {
+      const tl = gsap.timeline({ defaults: { ease: 'power2.out' }});
+      if (document.querySelector('#hero .caption h2')) tl.from('#hero .caption h2', { y: 20, opacity: 0, duration: 0.6 });
+      if (document.querySelectorAll('.btn-get-started').length) tl.from('.btn-get-started', { y: 10, opacity: 0, duration: 0.4, stagger: 0.05 }, '-=0.2');
+    }
+  } catch (e) {}
+
 });

@@ -234,6 +234,21 @@ img:hover {
   transform: scale(1.1);
 }
 
+/* Swup page transition */
+.transition-fade {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+html.is-animating .transition-fade {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* Rotating headline styling */
+#rotating-text {
+  color: var(--theme-color);
+  font-weight: 800;
+}
+
 .fill-btn{
   font-family: var(--font-primary);
   font-weight: 500;
