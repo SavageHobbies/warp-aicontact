@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>ROI Calculator | AI Contact Solutions</title>
+    <meta name="description" content="Estimate how much revenue you can recover by answering missed calls with an AI receptionist.">
+    <meta name="p:domain_verify" content="a0e9659b3d9acb75c0412f490608a602"/>
+
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/stylesheets/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/stylesheets/styles.css" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N1YM07XYV9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+      gtag('config', 'G-N1YM07XYV9');
+    </script>
+  </head>
+  <body>
+    <header id="header" class="page header d-flex align-items-center sticked stikcy-menu">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/images/logo.png" alt="logo">
+        </a>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="roi-calculator.html" class="active">ROI Calculator</a></li>
+            <li><a href="build-your-plan.html">Build Your Plan</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <a href="contact.html" class="btn-get-started hide-on-mobile">Book a Call</a>
+        <button id="darkmode-button"><i class="bi bi-moon-fill"></i></button>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      </div>
+    </header>
+
+    <div class="breadcrumbs">
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>ROI Calculator</li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <div class="section-header text-center" data-aos="fade-up">
+            <h2>See Your Potential ROI</h2>
+            <p>Estimate revenue recovered by answering missed calls with AI.</p>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="card p-4" style="border-radius: 16px;">
+                <div class="mb-4">
+                  <label class="form-label">How many calls do you miss per week?</label>
+                  <input type="range" min="0" max="200" step="1" value="10" class="form-range" id="missedCallsRange">
+                  <div class="d-flex justify-content-between"><small>0</small><small id="missedCallsValue">10</small><small>200</small></div>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label">Average value of a new client/customer ($)</label>
+                  <input type="number" class="form-control" id="clientValue" value="250" min="0" step="1">
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label">Close rate (%)</label>
+                  <input type="range" min="0" max="100" step="1" value="30" class="form-range" id="closeRateRange">
+                  <div class="d-flex justify-content-between"><small>0%</small><small id="closeRateValue">30%</small><small>100%</small></div>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label">AI capture rate of missed calls (%)</label>
+                  <input type="range" min="0" max="100" step="1" value="85" class="form-range" id="captureRateRange">
+                  <div class="d-flex justify-content-between"><small>0%</small><small id="captureRateValue">85%</small><small>100%</small></div>
+                </div>
+
+                <hr/>
+
+                <div class="row text-center g-3">
+                  <div class="col-md-6">
+                    <div class="p-3" style="background: var(--hero-card-bg); border-radius: 12px;">
+                      <small class="text-muted d-block">Potential Monthly Revenue Being Lost</small>
+                      <h3 id="monthlyLoss" class="mt-2 mb-0">$0</h3>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="p-3" style="background: var(--hero-card-bg); border-radius: 12px;">
+                      <small class="text-muted d-block">Annual Recovered Revenue with AI Receptionist</small>
+                      <h3 id="annualRecovered" class="mt-2 mb-0">$0</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="mt-3 mb-0 text-muted" style="font-size: 0.9rem;">This calculator provides an estimate for illustrative purposes only. Actual results may vary.</p>
+
+                <div class="text-center mt-4">
+                  <a href="solutions.html" class="btn-get-started">Ready to Capture This Revenue? See Our Solutions</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer-section">
+      <div class="container">
+        <div class="footer-content pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 mb-50">
+              <div class="footer-widget">
+                <div class="footer-logo">
+                  <a href="index.html" class="logo d-flex align-items-center">
+                    <img src="assets/images/logo-white.png" alt="logo">
+                  </a>
+                </div>
+                <div class="footer-text">
+                  <p>We provide innovative solutions tailored to your needs. Join us in transforming your digital landscape.</p>
+                </div>
+                <div class="footer-social-icon">
+                  <span>Follow Us</span>
+                  <a href="https://www.linkedin.com/company/ai-contact-solutions" class="social-icon linkedin" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=61580147679024" class="social-icon facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.tiktok.com/@aicontact.io" class="social-icon tiktok" target="_blank" rel="noopener"><i class="bi bi-music-note-beamed"></i></a>
+                  <a href="https://x.com/AIContactAgency" class="social-icon twitter" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
+                  <a href="https://www.instagram.com/aicontact.io/" class="social-icon instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 footer-column">
+              <div class="service-widget footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Information</h3>
+                </div>
+                <ul class="list">
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+              <div class="contact-widget footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Get In Touch</h3>
+                </div>
+                <div class="footer-text">
+                  <p><i class="bi bi-geo-alt-fill mr-15"></i> Dayton, Ohio</p>
+                  <p><i class="bi bi-telephone-inbound-fill mr-15"></i> 937-234-7744</p>
+                  <p><i class="bi bi-envelope-fill mr-15"></i> info@aicontact.io</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 text-left">
+              <div class="copyright-text">
+                <p>&copy; 2025 AI Contact Solutions. Designed with passion by <a href="https://www.templatemonster.com">Zr Themes</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <script src="assets/javascripts/jquery.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/javascripts/plugins.js"></script>
+    <script src="assets/javascripts/purecounter_vanilla.js"></script>
+    <script src="assets/javascripts/particles.min.js"></script>
+    <script src="assets/javascripts/main.js"></script>
+
+    <script>
+      const missedCallsEl = document.getElementById('missedCallsRange');
+      const clientValueEl = document.getElementById('clientValue');
+      const closeRateEl = document.getElementById('closeRateRange');
+      const captureRateEl = document.getElementById('captureRateRange');
+
+      const missedCallsValue = document.getElementById('missedCallsValue');
+      const closeRateValue = document.getElementById('closeRateValue');
+      const captureRateValue = document.getElementById('captureRateValue');
+
+      const monthlyLoss = document.getElementById('monthlyLoss');
+      const annualRecovered = document.getElementById('annualRecovered');
+
+      function fmt(n){
+        return n.toLocaleString(undefined, { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+      }
+
+      function recalc(){
+        const missedCalls = parseFloat(missedCallsEl.value || 0);
+        const value = parseFloat(clientValueEl.value || 0);
+        const closeRate = (parseFloat(closeRateEl.value || 0) / 100);
+        const captureRate = (parseFloat(captureRateEl.value || 0) / 100);
+
+        missedCallsValue.textContent = String(missedCalls);
+        closeRateValue.textContent = `${closeRateEl.value}%`;
+        captureRateValue.textContent = `${captureRateEl.value}%`;
+
+        const weeksPerMonth = 4.33;
+        const monthlyLost = missedCalls * weeksPerMonth * closeRate * value;
+        const annualRecoveredRevenue = missedCalls * weeksPerMonth * captureRate * closeRate * value * 12;
+
+        monthlyLoss.textContent = fmt(monthlyLost);
+        annualRecovered.textContent = fmt(annualRecoveredRevenue);
+      }
+
+      missedCallsEl.addEventListener('input', recalc);
+      clientValueEl.addEventListener('input', recalc);
+      closeRateEl.addEventListener('input', recalc);
+      captureRateEl.addEventListener('input', recalc);
+
+      recalc();
+    </script>
+
+    <script 
+      src="https://widgets.leadconnectorhq.com/loader.js" 
+      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
+      data-widget-id="68b07f665679bc72f3816238" >
+    </script>
+  </body>
+</html>

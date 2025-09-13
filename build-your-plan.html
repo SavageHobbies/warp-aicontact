@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Build Your Plan (A La Carte) | AI Contact Solutions</title>
+    <meta name="description" content="Select individual services and see your price update in real-time.">
+    <meta name="p:domain_verify" content="a0e9659b3d9acb75c0412f490608a602"/>
+
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/stylesheets/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/stylesheets/styles.css" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N1YM07XYV9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+      gtag('config', 'G-N1YM07XYV9');
+    </script>
+  </head>
+  <body>
+    <header id="header" class="page header d-flex align-items-center sticked stikcy-menu">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/images/logo.png" alt="logo">
+        </a>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="roi-calculator.html">ROI Calculator</a></li>
+            <li><a href="build-your-plan.html" class="active">Build Your Plan</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <a href="contact.html" class="btn-get-started hide-on-mobile">Book a Call</a>
+        <button id="darkmode-button"><i class="bi bi-moon-fill"></i></button>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      </div>
+    </header>
+
+    <div class="breadcrumbs">
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Build Your Plan</li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <div class="section-header text-center" data-aos="fade-up">
+            <h2>Build Your Plan (A La Carte)</h2>
+            <p>Pick individual services and see your total update in real time.
+              <br><small class="text-muted">Note: Pre-built packages on the Solutions page are ~20% better value than buying the same items here.</small>
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <div class="row g-4">
+                <!-- Google Business Profile Kickstart -->
+                <div class="col-md-6">
+                  <div class="card h-100 p-3">
+                    <h5>Google Business Profile Kickstart</h5>
+                    <p class="mb-2 text-muted">$297 One-Time</p>
+                    <div class="form-check">
+                      <input class="form-check-input service-input" type="checkbox" id="gbp" data-setup="297" data-monthly="0">
+                      <label class="form-check-label" for="gbp">Add to plan</label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- AI Webchat + Missed Call Text Back -->
+                <div class="col-md-6">
+                  <div class="card h-100 p-3">
+                    <h5>AI Webchat + Missed Call Text Back</h5>
+                    <p class="mb-2 text-muted">$197 Setup + $27/mo</p>
+                    <div class="form-check">
+                      <input class="form-check-input service-input" type="checkbox" id="webchat" data-setup="197" data-monthly="27">
+                      <label class="form-check-label" for="webchat">Add to plan</label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Social Media Planner -->
+                <div class="col-md-6">
+                  <div class="card h-100 p-3">
+                    <h5>Social Media Planner</h5>
+                    <p class="mb-2 text-muted">$97 Setup + $47/mo</p>
+                    <div class="form-check">
+                      <input class="form-check-input service-input" type="checkbox" id="smp" data-setup="97" data-monthly="47">
+                      <label class="form-check-label" for="smp">Add to plan</label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Reputation Management System -->
+                <div class="col-md-6">
+                  <div class="card h-100 p-3">
+                    <h5>Reputation Management System</h5>
+                    <p class="mb-2 text-muted">$97 Setup + $97/mo</p>
+                    <div class="form-check">
+                      <input class="form-check-input service-input" type="checkbox" id="rep" data-setup="97" data-monthly="97">
+                      <label class="form-check-label" for="rep">Add to plan</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="card p-3 sticky-top" style="top: 100px;">
+                <h5>Your Plan Summary</h5>
+                <div class="d-flex justify-content-between"><span>Setup Total</span><strong id="setupTotal">$0</strong></div>
+                <div class="d-flex justify-content-between"><span>Monthly Total</span><strong id="monthlyTotal">$0</strong></div>
+                <hr/>
+                <p class="text-muted" style="font-size: 0.9rem;">Tip: Our pre-built packages offer ~20% better value when combining services.</p>
+                <a href="contact.html" class="btn-get-started w-100">Checkout → Book a Call</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer-section">
+      <div class="container">
+        <div class="footer-content pt-5 pb-5">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 mb-50">
+              <div class="footer-widget">
+                <div class="footer-logo">
+                  <a href="index.html" class="logo d-flex align-items-center">
+                    <img src="assets/images/logo-white.png" alt="logo">
+                  </a>
+                </div>
+                <div class="footer-text">
+                  <p>We provide innovative solutions tailored to your needs. Join us in transforming your digital landscape.</p>
+                </div>
+                <div class="footer-social-icon">
+                  <span>Follow Us</span>
+                  <a href="https://www.linkedin.com/company/ai-contact-solutions" class="social-icon linkedin" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=61580147679024" class="social-icon facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.tiktok.com/@aicontact.io" class="social-icon tiktok" target="_blank" rel="noopener"><i class="bi bi-music-note-beamed"></i></a>
+                  <a href="https://x.com/AIContactAgency" class="social-icon twitter" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
+                  <a href="https://www.instagram.com/aicontact.io/" class="social-icon instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 footer-column">
+              <div class="service-widget footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Information</h3>
+                </div>
+                <ul class="list">
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+              <div class="contact-widget footer-widget">
+                <div class="footer-widget-heading">
+                  <h3>Get In Touch</h3>
+                </div>
+                <div class="footer-text">
+                  <p><i class="bi bi-geo-alt-fill mr-15"></i> Dayton, Ohio</p>
+                  <p><i class="bi bi-telephone-inbound-fill mr-15"></i> 937-234-7744</p>
+                  <p><i class="bi bi-envelope-fill mr-15"></i> info@aicontact.io</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 text-left">
+              <div class="copyright-text">
+                <p>&copy; 2025 AI Contact Solutions. Designed with passion by <a href="https://www.templatemonster.com">Zr Themes</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <script src="assets/javascripts/jquery.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/javascripts/plugins.js"></script>
+    <script src="assets/javascripts/purecounter_vanilla.js"></script>
+    <script src="assets/javascripts/particles.min.js"></script>
+    <script src="assets/javascripts/main.js"></script>
+
+    <script>
+      const inputs = document.querySelectorAll('.service-input');
+      const setupTotalEl = document.getElementById('setupTotal');
+      const monthlyTotalEl = document.getElementById('monthlyTotal');
+
+      function fmt(n){
+        return n.toLocaleString(undefined, { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+      }
+
+      function recalc(){
+        let setup = 0, monthly = 0;
+        inputs.forEach(i => {
+          if(i.checked){
+            setup += Number(i.getAttribute('data-setup')) || 0;
+            monthly += Number(i.getAttribute('data-monthly')) || 0;
+          }
+        });
+        setupTotalEl.textContent = fmt(setup);
+        monthlyTotalEl.textContent = fmt(monthly);
+      }
+
+      inputs.forEach(i => i.addEventListener('change', recalc));
+      recalc();
+    </script>
+
+    <script 
+      src="https://widgets.leadconnectorhq.com/loader.js" 
+      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
+      data-widget-id="68b07f665679bc72f3816238" >
+    </script>
+  </body>
+</html>
